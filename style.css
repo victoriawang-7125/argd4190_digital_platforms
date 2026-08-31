@@ -1,23 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+/* ===== GLOBAL STYLES ===== */
 body {
-    background-color: #fcf7f0;
-    font-family: 'Poppins', sans-serif;
+    background-color: #fdf8f0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 24px 28px;
+    line-height: 1.7;
+    color: #2a2420;
+    font-weight: 400;
 }
 
+/* ===== CLAMPED FONT SIZES ===== */
+:root{
+    --font-size-h1: clamp(1rem, 5rem +1.5vw, 10rem);
+    --font-size-h2: clamp(1rem, 3rem +1.5vw, 5rem);
+    --font-size-h3: clamp(1rem, 2rem +1.5vw, 3rem);
+    --font-size-p: clamp(1rem, 1rem +1vw, 1.5rem);
+}
+
+/* ===== HEADINGS ===== */
 h1 {
-    color: #4a3520;
+    color: #2c1810;
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+    text-align: center;
 }
 
+h2 {
+    color: #3d2a1e;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 36px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #dccfc0;
+    letter-spacing: -0.2px;
+}
+
+h3 {
+    color: #5a4030;
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 26px;
+    margin-bottom: 8px;
+    letter-spacing: -0.1px;
+}
+
+/* ===== PARAGRAPHS ===== */
 p {
-    color: #3d352c;
+    color: #3a322a;
+    margin-bottom: 14px;
+    font-weight: 400;
 }
 
+/* ===== NAVBAR ===== */
+nav {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 40px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee8e0;
+}
+
+.nav-logo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-logo a {
+    font-size: 26px;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 24px;
+    transition: all 0.2s ease;
+    color: #4a3520;
+    line-height: 1.2;
+    display: inline-block;
+}
+
+.nav-logo a:hover {
+    background-color: #f5ede4;
+    color: #2c1810;
+}
+
+nav ul li:not(.nav-logo) a {
+    color: #4a3f35;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 6px 14px 4px 14px;
+    border-radius: 24px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+nav ul li:not(.nav-logo) a:hover {
+    background-color: #f5ede4;
+    color: #2c1810;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #c47a4a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #e8925a;
+    text-decoration: underline;
+}
+
+/* ===== LISTS ===== */
+ul {
+    list-style-type: disc; 
+    padding-left: 24px;
+    margin-bottom: 16px;
+    color: #3a322a;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+/* ===== DIVIDERS ===== */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #eddcc8, #d48a5a, #eddcc8);
+    margin: 32px 0;
+    border-radius: 4px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    color: #9a8a7a;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 2px solid #e8ddd0;
+    letter-spacing: 0.3px;
+}
+
+/* ===== HEADER SUBTITLE ===== */
+header p {
+    color: #7a6a5a;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: -2px;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+}
+
+/* ===== CUSTOM CLASSES ===== */
 .blue-paragraph {
-    color: blue;
+    color: #5a8aaa;
 }
 
 #biggest {
-    font-size: 24px;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+strong {
+    font-weight: 700 !important;
+}
+
+/* ===== LOCATION PAGE IMAGE ===== */
+.location-image {
+    display: flex;
+    gap: 10px 20px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto 20px auto;
+    border-radius: 8px;       
+}
+
+/* ===== MEDIA QUERIES (May change later)===== */
+@media screen and (max-width: 768px) {
+  html{
+    font-size: 12px;
+  }
 }
