@@ -167,3 +167,4 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   renderAll();
   selectElement(selectedId);
 });
+
