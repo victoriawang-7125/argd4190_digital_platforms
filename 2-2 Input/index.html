@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Cat Poster Composer</title>
+</head>
+<body>
+
+<div class="layout">
+
+  <header class="header">
+    <h1>🐾 Cat Poster Composer</h1>
+    <p class="sub">Click any piece on the poster, then tweak it below.</p>
+  </header>
+
+  <!-- Alignment spacer -->
+  <div class="header-spacer" aria-hidden="true"></div>
+
+  <div id="poster"></div>
+
+  <div id="panel">
+    <div class="chooser" id="chooser"></div>
+
+    <div class="row text-row" id="row-text">
+      <label>Text</label>
+      <input type="text" id="ctrl-text">
+    </div>
+
+    <div class="row">
+      <label>X position <span id="lbl-x"></span></label>
+      <input type="range" id="ctrl-x" min="0" max="100" step="1">
+    </div>
+    <div class="row">
+      <label>Y position <span id="lbl-y"></span></label>
+      <input type="range" id="ctrl-y" min="0" max="100" step="1">
+    </div>
+    <div class="row">
+      <label>Size <span id="lbl-size"></span></label>
+      <input type="range" id="ctrl-size" min="10" max="220" step="1">
+    </div>
+    <div class="row">
+      <label>Scale <span id="lbl-scale"></span></label>
+      <input type="range" id="ctrl-scale" min="0.3" max="3" step="0.05">
+    </div>
+    <div class="row">
+      <label>Skew <span id="lbl-skew"></span></label>
+      <input type="range" id="ctrl-skew" min="-45" max="45" step="1">
+    </div>
+    <div class="row color-row" id="row-color">
+      <label>Color</label>
+      <input type="color" id="ctrl-color">
+    </div>
+
+    <div class="row" id="row-visible" style="display:flex; align-items:center; gap:8px;">
+      <input type="checkbox" id="ctrl-visible" style="width:auto;">
+      <label style="margin:0;">Visible</label>
+    </div>
+
+    <hr>
+    <button id="resetBtn">Reset poster</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
